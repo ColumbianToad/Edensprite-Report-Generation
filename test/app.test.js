@@ -6,7 +6,7 @@ describe("Application security tests", () => {
         const res = await request(app).get("/dashboard");
         expect(res.statusCode).toBe(302);
         expect(res.headers.location).toBe("/login");
-    });
+    }); // test
 
     test("rejects SQL injection login attempt", async () => {
         const res = await request(app)
